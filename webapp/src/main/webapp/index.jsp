@@ -3,4 +3,4 @@
 <h2> Steup and deploy using jenkins and docker </h2>
 <h2> Steup and deploy using jenkins </h2>
 <h2> Steup and deploy using jenkins and docker </h2>
-<h1> integrating webhooks (git hub) </h1>
+<h1> integrating webhooks (from git hub) </h1>
