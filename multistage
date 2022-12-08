@@ -1,0 +1,11 @@
+FROM ubuntu as builder
+RUN apt update -y
+RUN apt install git -y
+RUN git clone 'https://github.com/Prashantb1307/hello_world_public_war.git'
+RUN apt install maven -y
+RUN mvn -f /hello_world_public_war clean install
+
+#deploying
+FROM tomcat:10.0.27
+COPY --from=builder /hello_world_public_war/webapp/target/webapp.war /usr/local/tomcat/webapps/webapp.war
+EXPOSE 8080
